@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html ng-app="pokedex">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="img/logo.png">
+            Pokédex
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <!-- pokemon -->
+      <div>
+        <div class="page-header">
+          <h1>
+            Bulbasaur
+            <small>Seed Pokémon</small>
+            <span class="label label-primary pull-right">#101</span>
+          </h1>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <img class="avatar center-block" src="img/pokemons/bulbasaur.jpg">
+          </div>
+          <!-- Tabs -->
+          <div class="col-md-6" ng-controller="TabsController as tabs">
+            <ul class="nav nav-tabs nav-justified">
+              <li class="active"><a data-tab="#data">Pokédex</a></li>
+              <li class=""><a data-tab="#stats">Stats</a></li>
+              <li class=""><a data-tab="#evolution">Evolution</a></li>
+            </ul>
+            <div class="tab-content">
+              <!-- Pokedex -->
+              <div id="data">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <strong>Type</strong>
+                    <span class="pull-right">
+                      <a href="/grass">
+                        <span class="label type type-grass">
+                          Grass
+                        </span>
+                      </a>
+                      <a href="/poison">
+                        <span class="label type type-poison">
+                          Poison
+                        </span>
+                      </a>
+                    </span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Height</strong>
+                    <span class="pull-right">2′4″ (0.71m)</span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Weight</strong>
+                    <span class="pull-right">15.2 lbs (6.9 kg)</span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Abilities</strong>
+                    <ul>
+                      <li>
+                        Overgrow
+                      </li>
+                      <li>
+                        Chlorophyll
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+              </div>
+              <!-- Stats -->
+              <div id="stats">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <strong>HP</strong>
+                    <span class="badge">45</span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Attack</strong>
+                    <span class="badge">49</span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Defense</strong>
+                    <span class="badge">49</span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Special Attack</strong>
+                    <span class="badge">65</span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Special Defense</strong>
+                    <span class="badge">65</span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Speed</strong>
+                    <span class="badge">45</span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Total</strong>
+                    <span class="badge">318</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- Evolution -->
+              <div id="evolution">
+                <div class="text-center">
+                  <a href="/pokemon/ivysaur">
+                    <img src="img/pokemons/bulbasaur.jpg" width="160">
+                    <p>
+                      <strong>Bulbasaur</strong>
+                    </p>
+                  </a>
+                  <span class="glyphicon glyphicon-arrow-down"></span>
+                </div>
+                <div class="text-center">
+                  <a href="/pokemon/ivysaur">
+                    <img src="img/pokemons/ivysaur.jpg" width="160">
+                    <p>
+                      <strong>Ivysaur</strong>
+                    </p>
+                  </a>
+                  <span class="glyphicon glyphicon-arrow-down"></span>
+                </div>
+                <div class="text-center">
+                  <a href="/pokemon/ivysaur">
+                    <img src="img/pokemons/venusaur.jpg" width="160">
+                    <p>
+                      <strong>Venusaur</strong>
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /tabs -->
+        </div>
+      </div>
+      <!-- /pokemon -->
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
